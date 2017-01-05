@@ -6,30 +6,58 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SampleActivity" >
+    tools:context=".SampleActivity"
+    android:background="@color/wallet_highlighted_text_holo_dark">
 
-   <LinearLayout
-       android:id="@+id/wrapper"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_alignParentRight="true"
-       android:layout_centerVertical="true"
-       android:orientation="vertical" >
+    <Button
+        android:id="@+id/buyItBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onBuyPressed"
+        android:text="Transfer"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical" />
 
-       <Button
-           android:id="@+id/buyItBtn"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="20dp"
-           android:onClick="onBuyPressed"
-           android:text="Buy a Thing" />
+    <LinearLayout
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true">
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textAppearance="?android:attr/textAppearanceSmall"
-           android:text=""
-           android:id="@+id/txtResult" />
-   </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/txtResult" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter amount"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_marginTop="165dp"
+        android:layout_below="@+id/wrapper"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+       android:hint="user name"
+        android:ems="10"
+        android:layout_below="@+id/wrapper"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:id="@+id/editText2" />
 
 </RelativeLayout>
